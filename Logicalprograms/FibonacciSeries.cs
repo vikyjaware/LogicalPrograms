@@ -10,7 +10,7 @@ namespace Logicalprograms
     {
         public void Fibonacci()
         {
-            Console.WriteLine("Enter the number of terms required ");
+            Console.WriteLine("Enter the number of terms required in the series ");
             int n = Convert.ToInt32(Console.ReadLine()) ;
             int i, firstnum = 1, secondnum = 1, thirdnum;
             Console.Write(firstnum + "\t" +secondnum );
