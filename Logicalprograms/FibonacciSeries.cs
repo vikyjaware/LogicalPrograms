@@ -6,20 +6,28 @@ using System.Threading.Tasks;
 
 namespace Logicalprograms
 {
-    public class FibonacciSeries
+    public class PerfectNumber
     {
-        public void Fibonacci()
+        public void Perfect()
         {
-            Console.WriteLine("Enter the number of terms required in the series ");
-            int n = Convert.ToInt32(Console.ReadLine()) ;
-            int i, firstnum = 1, secondnum = 1, thirdnum;
-            Console.Write(firstnum + "\t" +secondnum );
-            for( i=2; i<n; i++)
+            Console.WriteLine("Enter the number to find is perfect or not ...");
+            int num = Convert.ToInt32(Console.ReadLine()) ;
+            int i, sum = 0;
+            for( i=1; i<=num/2; i++)
             {
-                thirdnum = firstnum + secondnum;
-                firstnum = secondnum;
-                secondnum= thirdnum;
-                Console.Write("\t" +thirdnum );
+                if(num%i==0)
+                {
+                    sum+=i;
+                }
+                if (sum == num)
+                {
+                    Console.WriteLine(num + " is a perfect number");
+                }
+
+            }
+            if(sum!=num)
+            {
+                Console.WriteLine(num + " is not a perfect number ");
             }
         }
     }
